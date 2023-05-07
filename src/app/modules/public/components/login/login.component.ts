@@ -14,6 +14,7 @@ export class LoginComponent {
     ci: new FormControl('', [ Validators.required ]),
     password: new FormControl('', [ Validators.required ])
   });
+  isLoading: boolean = false;
 
   constructor(
     private readonly authService: AuthService,
@@ -22,20 +23,24 @@ export class LoginComponent {
   }
 
   login() {
+    this.isLoading = true;
     if (this.formGroup.invalid) {
       this.authService.showMessageDialog('Error', 'Ingrese los datos correctamente', 'error');
+      this.isLoading = false;
       return;
     }
     const loginRequest = this.formGroup.value;
     this.authService.login(loginRequest).pipe(
       tap({
         next: (_) => {
+          this.isLoading = false;
           this.router.navigate([ '../../private' ]);
         },
       })
     ).subscribe({
       error: (_) => {
         console.clear();
+        this.isLoading = false;
       },
     });
   }

@@ -11,11 +11,11 @@ import { TablerIconsModule } from 'angular-tabler-icons';
 import * as TablerIcons from 'angular-tabler-icons/icons';
 
 //Import all material modules
-import { AngularMaterialModule } from './angular-material.module';
 
 // Import all other modules
 import { JwtModule } from "@auth0/angular-jwt";
 import { jwtOptions } from "@core/config/jwt.config";
+import { AngularMaterialModule } from "@app/angular-material.module";
 
 @NgModule({
   declarations: [
@@ -26,7 +26,6 @@ import { jwtOptions } from "@core/config/jwt.config";
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    AngularMaterialModule,
     TablerIconsModule.pick(TablerIcons),
     JwtModule.forRoot(jwtOptions),
   ],

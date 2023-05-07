@@ -81,4 +81,5 @@ import { MatTableModule } from '@angular/material/table';
     MatTableModule,
   ],
 })
-export class AngularMaterialModule {}
+export class AngularMaterialModule {
+}

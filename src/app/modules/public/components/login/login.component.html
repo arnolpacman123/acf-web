@@ -73,9 +73,18 @@
               >¿Olvidó su contraseña?</a
               >
             </div>
-            <button type="submit" mat-flat-button color="primary" class="w-100">
-              Iniciar Sesión
-            </button>
+            <ng-container *ngIf="!isLoading; else loading">
+              <button type="submit" mat-flat-button color="primary" class="w-100">
+                Iniciar Sesión
+              </button>
+            </ng-container>
+            <ng-template #loading>
+              <div class="wrapper center">
+                <div class="inner">
+                <mat-spinner diameter="50" class="center"></mat-spinner>
+                </div>
+              </div>
+            </ng-template>
           </form>
         </mat-card-content>
       </mat-card>
