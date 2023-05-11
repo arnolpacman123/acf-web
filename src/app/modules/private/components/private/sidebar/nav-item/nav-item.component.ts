@@ -1,6 +1,6 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { Router } from '@angular/router';
-import { NavItem } from "@private/components/dashboard/sidebar/nav-item/nav-item.interface";
+import { NavItem } from "@private/components/private/sidebar/nav-item/nav-item.interface";
 import { NavService } from "@core/services/nav.service";
 
 @Component({
@@ -29,7 +29,7 @@ export class NavItemComponent implements OnChanges {
 
   onItemSelected(item: NavItem) {
     if (!item.children || !item.children.length) {
-      this.router.navigate([ item.route ]);
+      this.router.navigate([ `../private${ item.route }` ]);
     }
 
     // scroll

@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { LoginRequest, LoginResponse } from "@public/models/interfaces";
-import { catchError, Observable, tap } from "rxjs";
+import { Observable, tap } from "rxjs";
 import { environment } from "@environments/environment.prod";
 import { JwtHelperService } from "@auth0/angular-jwt";
 import Swal from "sweetalert2";
+import { User } from "@models/interfaces";
 
 @Injectable()
 export class AuthService {
@@ -45,7 +46,7 @@ export class AuthService {
     });
   }
 
-  getLoggedUser() {
+  getLoggedUser(): User {
     const decodedToken = this.jwtHelperService.decodeToken();
     return decodedToken.user;
   }

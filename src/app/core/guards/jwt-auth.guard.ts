@@ -1,9 +1,9 @@
-import { ActivatedRouteSnapshot, Router, RouterStateSnapshot } from "@angular/router";
+import { ActivatedRouteSnapshot, CanActivateFn, Router, RouterStateSnapshot } from "@angular/router";
 import { inject } from "@angular/core";
 import { JwtHelperService } from "@auth0/angular-jwt";
 
 export namespace JwtAuthGuard {
-  export const canActivate = (
+  export const canActivate: CanActivateFn = (
     _: ActivatedRouteSnapshot,
     __: RouterStateSnapshot,
   ): boolean => {
