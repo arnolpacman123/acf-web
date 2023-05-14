@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-// icons
+// Icons Module
 import { TablerIconsModule } from 'angular-tabler-icons';
 import * as TablerIcons from 'angular-tabler-icons/icons';
 
@@ -15,7 +15,6 @@ import * as TablerIcons from 'angular-tabler-icons/icons';
 // Import all other modules
 import { JwtModule } from "@auth0/angular-jwt";
 import { jwtOptions } from "@core/config/jwt.config";
-import { AngularMaterialModule } from "@app/angular-material.module";
 
 @NgModule({
   declarations: [

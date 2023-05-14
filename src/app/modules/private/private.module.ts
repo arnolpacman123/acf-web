@@ -11,6 +11,7 @@ import { BrandingComponent } from './components/private/sidebar/branding/brandin
 import { HeaderComponent } from './components/private/header/header.component';
 import { ChampionshipsComponent } from './components/championships/championships.component';
 import { FormsModule } from "@angular/forms";
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FormsModule } from "@angular/forms";
     NavItemComponent,
     BrandingComponent,
     HeaderComponent,
-    ChampionshipsComponent
+    ChampionshipsComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,

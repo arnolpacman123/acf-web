@@ -30,8 +30,6 @@ export class AuthService {
           const incorrectField = error.error.errors.incorrect_field;
           this.showMessageDialog(error.error.message, `El campo ${ incorrectField } es incorrecto`, 'error');
         },
-        finalize: () => {
-        },
       }),
     );
   }

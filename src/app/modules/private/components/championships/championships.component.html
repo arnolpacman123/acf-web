@@ -4,34 +4,109 @@
   </mat-card-header>
   <mat-card-content class="b-t-1">
 
-    <form class="m-t-30" >
-      <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
-      >CI
-      </mat-label
-      >
-      <mat-form-field appearance="outline" class="w-100" color="primary">
-        <input matInput type="text"/>
-      </mat-form-field>
-      <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
-      >Contraseña
-      </mat-label
-      >
-      <mat-form-field appearance="outline" class="w-100" color="primary">
-        <input matInput type="password"/>
-      </mat-form-field>
-<!--      <ng-container *ngIf="!isLoading; else loading">-->
-<!--        <button type="submit" mat-flat-button color="primary" class="w-100">-->
-<!--          Iniciar Sesión-->
-<!--        </button>-->
-<!--      </ng-container>-->
-<!--      <ng-template #loading>-->
-<!--        <div class="wrapper center">-->
-<!--          <div class="inner">-->
-<!--            <mat-spinner diameter="50" class="center"></mat-spinner>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </ng-template>-->
-    </form>
+    <div class="mx-5">
+      <form class="m-t-30">
+        <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+        >Nombre
+        </mat-label
+        >
+        <mat-form-field appearance="outline" class="w-100" color="primary">
+          <input matInput type="text"/>
+        </mat-form-field>
+        <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+        >Descripción
+        </mat-label
+        >
+        <mat-form-field appearance="outline" class="w-100" color="primary">
+          <input matInput type="text"/>
+        </mat-form-field>
+
+        <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+        >Fecha de inicio
+        </mat-label>
+        <mat-form-field appearance="outline" class="w-100" color="primary">
+          <input matInput [matDatepicker]="picker" (click)="openDatePicker()"
+                 placeholder="Selecciona la fecha"/>
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker ></mat-datepicker>
+        </mat-form-field>
+
+
+        <!-- button centered -->
+        <div class="text-center">
+          <button
+            mat-raised-button
+            color="primary"
+            class="btn-block w-50"
+            type="submit"
+          >
+            Registrar
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="row w-auto mt-4 mx-4">
+
+      <div class="col-lg-6">
+        <mat-card class="b-1 shadow-none">
+          <mat-card-header>
+            <mat-card-title>Campeonato 1</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="b-t-1">
+            <mat-list style="max-width: 500px">
+              <mat-list-item lines="3">
+                <span matListItemTitle class="f-s-16 f-w-600">Title</span>
+                <span class="mat-body-1"
+                >Secondary line that will wrap because the list lines is
+                  explicitly set to 3 lines. Text inside of a `matListItemTitle`
+                  or `matListItemLine` will never wrap.
+                </span>
+              </mat-list-item>
+              <mat-list-item lines="3" class="mat-body-1">
+                <span matListItemTitle class="f-s-16 f-w-600">Title</span>
+                <span class="mat-body-1"
+                >Secondary line that will wrap because the list lines is
+                  explicitly set to 3 lines. Text inside of a `matListItemTitle`
+                  or `matListItemLine` will never wrap.
+                </span>
+              </mat-list-item>
+            </mat-list>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="col-lg-6">
+        <mat-card class="b-1 shadow-none">
+          <mat-card-header>
+            <mat-card-title>Campeonato 2</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="b-t-1">
+            <mat-list style="max-width: 500px">
+              <mat-list-item lines="3">
+                <span matListItemTitle class="f-s-16 f-w-600">Title</span>
+                <span class="mat-body-1"
+                >Secondary line that will wrap because the list lines is
+                  explicitly set to 3 lines. Text inside of a `matListItemTitle`
+                  or `matListItemLine` will never wrap.
+                </span>
+              </mat-list-item>
+              <mat-list-item lines="3" class="mat-body-1">
+                <span matListItemTitle class="f-s-16 f-w-600">Title</span>
+                <span class="mat-body-1"
+                >Secondary line that will wrap because the list lines is
+                  explicitly set to 3 lines. Text inside of a `matListItemTitle`
+                  or `matListItemLine` will never wrap.
+                </span>
+              </mat-list-item>
+            </mat-list>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
 
   </mat-card-content>
 </mat-card>
