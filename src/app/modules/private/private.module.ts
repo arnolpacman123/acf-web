@@ -12,6 +12,7 @@ import { HeaderComponent } from './components/private/header/header.component';
 import { ChampionshipsComponent } from './components/championships/championships.component';
 import { FormsModule } from "@angular/forms";
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AcfService } from './services/acf.service';
 
 
 @NgModule({
@@ -30,7 +31,10 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     AngularMaterialModule,
     TablerIconsModule,
     FormsModule,
-  ]
+  ],
+  providers: [
+    AcfService
+  ],
 })
 export class PrivateModule {
 }

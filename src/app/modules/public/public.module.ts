@@ -19,7 +19,7 @@ import { AngularMaterialModule } from "@app/angular-material.module";
         AngularMaterialModule,
     ],
   providers: [
-    AuthService,
+    AuthService
   ],
 })
 export class PublicModule {
