@@ -19,6 +19,6 @@ export class AcfService {
    }
 
    getChampionsAll() {
-      return this.getQuery('/championships')
+      return this.getQuery('/championships');
    }
 }

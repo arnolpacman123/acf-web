@@ -33,13 +33,12 @@ export class ChampionshipsComponent {
 
   constructor( private acf : AcfService ) {
     this.acf.getChampionsAll()
-    .subscribe((data : any) => {
-      console.log(data);
-
-    })
-
-    console.log(this.champions);
-
+    .subscribe({
+      next: (data : any) => {
+        console.log(data);
+        this.champions = data;
+      },
+    });
   }
 
 

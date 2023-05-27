@@ -49,62 +49,35 @@
       </form>
     </div>
 
-    <div class="row w-auto mt-4 mx-4">
 
-      <div class="col-lg-6">
-        <mat-card class="b-1 shadow-none">
-          <mat-card-header>
-            <mat-card-title>Campeonato 1</mat-card-title>
-          </mat-card-header>
-          <mat-card-content class="b-t-1">
-            <mat-list style="max-width: 500px">
-              <mat-list-item lines="3">
-                <span matListItemTitle class="f-s-16 f-w-600">Title</span>
-                <span class="mat-body-1"
-                >Secondary line that will wrap because the list lines is
-                  explicitly set to 3 lines. Text inside of a `matListItemTitle`
-                  or `matListItemLine` will never wrap.
-                </span>
-              </mat-list-item>
-              <mat-list-item lines="3" class="mat-body-1">
-                <span matListItemTitle class="f-s-16 f-w-600">Title</span>
-                <span class="mat-body-1"
-                >Secondary line that will wrap because the list lines is
-                  explicitly set to 3 lines. Text inside of a `matListItemTitle`
-                  or `matListItemLine` will never wrap.
-                </span>
-              </mat-list-item>
-            </mat-list>
-          </mat-card-content>
-        </mat-card>
-      </div>
-
-      <div class="col-lg-6">
-        <mat-card class="b-1 shadow-none">
-          <mat-card-header>
-            <mat-card-title class="centered">Campeonato 2023</mat-card-title>
-          </mat-card-header>
-          <mat-card-content class="b-t-1">
-            <mat-list style="max-width: 500px">
-              <mat-list-item lines="3">
-                <span matListItemTitle class="f-s-16 f-w-600">Title</span>
-                <span class="mat-body-1"
-                >Secondary line that will wrap because the list lines is
-                  explicitly set to 3 lines. Text inside of a `matListItemTitle`
-                  or `matListItemLine` will never wrap.
-                </span>
-              </mat-list-item>
-              <mat-list-item lines="3" class="mat-body-1">
-                <span matListItemTitle class="f-s-16 f-w-600">Title</span>
-                <span class="mat-body-1"
-                >Secondary line that will wrap because the list lines is
-                  explicitly set to 3 lines. Text inside of a `matListItemTitle`
-                  or `matListItemLine` will never wrap.
-                </span>
-              </mat-list-item>
-            </mat-list>
-          </mat-card-content>
-        </mat-card>
+    <div class="d-flex align-items-center justify-content-center">
+      <div class="row w-100 mt-4">
+        <div class="col-lg-4 w-100" *ngFor="let champion of champions">
+          <mat-card class="b-2 shadow-none">
+            <mat-card-header class="element-position">
+              <mat-card-title color="primary"> {{ champion.name }} </mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <div class="container-center">
+              <img mat-card-image src="./assets/images/profile/copa.png" alt="Trofeo">
+            </div>
+            <mat-card-content class="b-x-1 px-4">
+              <p>{{ champion.description }}</p>
+              <p>{{ champion.startDate }} </p>
+            </mat-card-content>
+            <mat-card-actions>
+                  <div class="button-center text-center w-100">
+                    <div class="my-1">
+                      <button mat-raised-button color="accent">ADMINISTRAR</button>
+                    </div>
+                    <div>
+                      <button class="mx-1" mat-raised-button color="primary">EDITAR</button>
+                      <button class="mx-1" mat-raised-button color="warn">DELETE</button>
+                    </div>
+                  </div>
+            </mat-card-actions>
+          </mat-card>
+        </div>
       </div>
     </div>
 
