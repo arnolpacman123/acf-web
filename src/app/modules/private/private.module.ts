@@ -13,6 +13,8 @@ import { ChampionshipsComponent } from './components/championships/championships
 import { FormsModule } from "@angular/forms";
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AcfService } from './services/acf.service';
+import { CardComponent } from './components/card/card.component';
+import { NoimagePipe } from './pipes/noimage.pipe';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { AcfService } from './services/acf.service';
     BrandingComponent,
     HeaderComponent,
     ChampionshipsComponent,
-    DashboardComponent
+    DashboardComponent,
+    CardComponent,
+    NoimagePipe
   ],
   imports: [
     CommonModule,

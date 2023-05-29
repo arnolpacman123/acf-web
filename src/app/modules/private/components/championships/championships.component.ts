@@ -28,6 +28,7 @@ export const MY_FORMATS = {
 export class ChampionshipsComponent {
 
   champions: any[] = [];
+  buttons: any[] = [];
 
   @ViewChild('picker', { static: false }) picker!: MatDatepicker<Date>;
 
@@ -37,11 +38,20 @@ export class ChampionshipsComponent {
       next: (data : any) => {
         console.log(data);
         this.champions = data;
+        this.buttons = [
+          {
+            "color": "accent",
+            "text": "ADMINISTRAR"
+          },
+          {
+            "color": "primary",
+            "text": "EDITAR"
+          }
+        ];
       },
     });
+
   }
-
-
 
   openDatePicker(): void {
     this.picker.open();
