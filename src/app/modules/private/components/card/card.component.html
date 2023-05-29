@@ -1,0 +1,23 @@
+
+
+<mat-card class="b-2 shadow-none">
+  <mat-card-header class="element-center d-flex justify-content-between">
+    <mat-card-title color="primary" class="pt-1"> {{ champion.name }} </mat-card-title>
+    <button mat-mini-fab color="warn" class="justify-content-center">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <div class="container-center">
+    <img mat-card-image [src]=" '' | noimage" alt="Trofeo">
+  </div>
+  <mat-card-content class="b-x-1 px-4">
+    <p>{{ champion.description }}</p>
+    <p>{{ champion.startDate | date: 'shortDate'}} </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <div class=" ps-3 text-center w-100" *ngFor="let boton of buttons">
+      <button mat-raised-button [color]="boton.color">{{ boton.text }}</button>
+    </div>
+  </mat-card-actions>
+</mat-card>

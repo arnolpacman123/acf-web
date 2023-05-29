@@ -49,37 +49,14 @@
       </form>
     </div>
 
-
     <div class="d-flex align-items-center justify-content-center">
       <div class="row w-100 mt-4">
         <div class="col-lg-4 w-100" *ngFor="let champion of champions">
-          <mat-card class="b-2 shadow-none">
-            <mat-card-header class="element-position">
-              <mat-card-title color="primary"> {{ champion.name }} </mat-card-title>
-            </mat-card-header>
-            <mat-divider></mat-divider>
-            <div class="container-center">
-              <img mat-card-image src="./assets/images/profile/copa.png" alt="Trofeo">
-            </div>
-            <mat-card-content class="b-x-1 px-4">
-              <p>{{ champion.description }}</p>
-              <p>{{ champion.startDate }} </p>
-            </mat-card-content>
-            <mat-card-actions>
-                  <div class="button-center text-center w-100">
-                    <div class="my-1">
-                      <button mat-raised-button color="accent">ADMINISTRAR</button>
-                    </div>
-                    <div>
-                      <button class="mx-1" mat-raised-button color="primary">EDITAR</button>
-                      <button class="mx-1" mat-raised-button color="warn">DELETE</button>
-                    </div>
-                  </div>
-            </mat-card-actions>
-          </mat-card>
+          <app-card [champion]="champion" [buttons]="buttons"> </app-card>
         </div>
       </div>
     </div>
+
 
   </mat-card-content>
 </mat-card>
