@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class CardComponent {
 
-  @Input() champion: any;
+  @Input() element: any;
   @Input() buttons: any[] = [];
 
   constructor() {
