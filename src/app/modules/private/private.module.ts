@@ -12,7 +12,7 @@ import { HeaderComponent } from './components/private/header/header.component';
 import { ChampionshipsComponent } from './components/championships/championships.component';
 import { FormsModule } from "@angular/forms";
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { AcfService } from './services/acf.service';
+import { AcfDataService } from './services/acf.data.service';
 import { CardComponent } from './components/card/card.component';
 import { NoimagePipe } from './pipes/noimage.pipe';
 
@@ -37,7 +37,7 @@ import { NoimagePipe } from './pipes/noimage.pipe';
     FormsModule,
   ],
   providers: [
-    AcfService
+    AcfDataService
   ],
 })
 export class PrivateModule {

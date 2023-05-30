@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { MatDatepicker } from "@angular/material/datepicker";
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from "@angular/material/core";
 import { MomentDateAdapter } from "@angular/material-moment-adapter";
-import { AcfService } from '@app/modules/private/services/acf.service';
+import { AcfDataService } from '@app/modules/private/services/acf.data.service';
 
 export const MY_FORMATS = {
   parse: {
@@ -32,11 +32,11 @@ export class ChampionshipsComponent {
 
   @ViewChild('picker', { static: false }) picker!: MatDatepicker<Date>;
 
-  constructor( private acf : AcfService ) {
-    this.acf.getChampionsAll()
+  constructor( private acfDataService : AcfDataService ) {
+    this.acfDataService.getChampionsAll()
     .subscribe({
       next: (data : any) => {
-        console.log(data);
+        //console.log(data);
         this.champions = data;
         this.buttons = [
           {
@@ -49,6 +49,10 @@ export class ChampionshipsComponent {
           }
         ];
       },
+      error(e) {
+        console.log(e);
+        acfDataService.showMessageDialog('Info', 'Ha ocurrido un error al obtener los datos', 'warning');
+      }
     });
 
   }
