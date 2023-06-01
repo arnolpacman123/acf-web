@@ -28,7 +28,6 @@ export const MY_FORMATS = {
 export class ChampionshipsComponent {
 
   champions: any[] = [];
-  buttons: any[] = [];
 
   @ViewChild('picker', { static: false }) picker!: MatDatepicker<Date>;
 
@@ -38,22 +37,17 @@ export class ChampionshipsComponent {
       next: (data : any) => {
         //console.log(data);
         this.champions = data;
-        this.buttons = [
-          {
-            "color": "accent",
-            "text": "ADMINISTRAR"
-          },
-          {
-            "color": "primary",
-            "text": "EDITAR"
-          }
-        ];
       },
       error(e) {
         console.log(e);
         acfDataService.showMessageDialog('Info', 'Ha ocurrido un error al obtener los datos', 'warning');
       }
     });
+
+  }
+
+  pruebaMethods() {
+    console.log("Si se pueden mandar methods");
 
   }
 

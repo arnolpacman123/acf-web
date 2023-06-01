@@ -17,6 +17,9 @@ const routes: Routes = [
         path: 'championships',
         component: ChampionshipsComponent,
       },
+/*        path: 'championships',
+        component: ChampionshipsComponent,
+      }, */
       {
         path: '**',
         redirectTo: 'dashboard',

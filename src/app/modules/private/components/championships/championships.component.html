@@ -51,8 +51,22 @@
 
     <div class="d-flex align-items-center justify-content-center">
       <div class="row w-100 mt-4">
+        <div class="col-lg-4">
+          <app-new-element-card></app-new-element-card>
+        </div>
         <div class="col-lg-4 w-100" *ngFor="let champion of champions">
-          <app-card [element]="champion" [buttons]="buttons"> </app-card>
+          <div>
+            <mat-card class="b-2 shadow-none">
+              <app-card [element]="champion"> </app-card>
+              <mat-card-actions>
+                <div class="text-center w-100">
+                  <button mat-raised-button color="accent" class="fw-bold" >ADMINISTRAR</button>
+                  <button mat-raised-button color="primary" class="fw-bold" >EDITAR</button>
+                </div>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+
         </div>
       </div>
     </div>
