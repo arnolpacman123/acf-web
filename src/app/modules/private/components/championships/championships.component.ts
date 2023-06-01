@@ -46,11 +46,6 @@ export class ChampionshipsComponent {
 
   }
 
-  pruebaMethods() {
-    console.log("Si se pueden mandar methods");
-
-  }
-
   openDatePicker(): void {
     this.picker.open();
   }

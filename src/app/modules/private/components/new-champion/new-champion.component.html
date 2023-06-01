@@ -1,0 +1,55 @@
+<mat-card class="cardWithShadow theme-card">
+  <mat-card-header>
+    <mat-card-title class="m-b-0">Campeonatos</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="b-t-1">
+
+    <div class="mx-5">
+      <form class="m-t-30">
+        <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+        >Nombre
+        </mat-label
+        >
+        <mat-form-field appearance="outline" class="w-100" color="primary">
+          <input matInput type="text"/>
+        </mat-form-field>
+        <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+        >Descripción
+        </mat-label
+        >
+        <mat-form-field appearance="outline" class="w-100" color="primary">
+          <input matInput type="text"/>
+        </mat-form-field>
+
+        <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+        >Fecha de inicio
+        </mat-label>
+        <mat-form-field appearance="outline" class="w-100" color="primary">
+          <input matInput [matDatepicker]="picker" (click)="openDatePicker()"
+                 placeholder="Selecciona la fecha"/>
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker ></mat-datepicker>
+        </mat-form-field>
+
+
+        <!-- button centered -->
+        <div class="text-center">
+          <button
+          mat-raised-button
+          color="primary"
+          class="btn-block w-50"
+          type="submit"
+          >
+          Registrar
+        </button>
+      </div>
+    </form>
+  </div>
+
+    </mat-card-content>
+</mat-card>
+
+

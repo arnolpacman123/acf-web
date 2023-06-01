@@ -1,55 +1,5 @@
-<mat-card class="cardWithShadow theme-card">
-  <mat-card-header>
-    <mat-card-title class="m-b-0">Campeonatos</mat-card-title>
-  </mat-card-header>
-  <mat-card-content class="b-t-1">
-
-    <div class="mx-5">
-      <form class="m-t-30">
-        <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
-        >Nombre
-        </mat-label
-        >
-        <mat-form-field appearance="outline" class="w-100" color="primary">
-          <input matInput type="text"/>
-        </mat-form-field>
-        <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
-        >Descripción
-        </mat-label
-        >
-        <mat-form-field appearance="outline" class="w-100" color="primary">
-          <input matInput type="text"/>
-        </mat-form-field>
-
-        <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
-        >Fecha de inicio
-        </mat-label>
-        <mat-form-field appearance="outline" class="w-100" color="primary">
-          <input matInput [matDatepicker]="picker" (click)="openDatePicker()"
-                 placeholder="Selecciona la fecha"/>
-          <mat-datepicker-toggle
-            matSuffix
-            [for]="picker"
-          ></mat-datepicker-toggle>
-          <mat-datepicker #picker ></mat-datepicker>
-        </mat-form-field>
-
-
-        <!-- button centered -->
-        <div class="text-center">
-          <button
-            mat-raised-button
-            color="primary"
-            class="btn-block w-50"
-            type="submit"
-          >
-            Registrar
-          </button>
-        </div>
-      </form>
-    </div>
-
-    <div class="d-flex align-items-center justify-content-center">
+    <div class="justify-content-center">
+      <h2 class="fw-bold">Campeonatos</h2>
       <div class="row w-100 mt-4">
         <div class="col-lg-4">
           <app-new-element-card></app-new-element-card>
@@ -58,9 +8,9 @@
           <div>
             <mat-card class="b-2 shadow-none">
               <app-card [element]="champion"> </app-card>
-              <mat-card-actions>
-                <div class="text-center w-100">
-                  <button mat-raised-button color="accent" class="fw-bold" >ADMINISTRAR</button>
+              <mat-card-actions class="my-2">
+                <div class="text-center w-100 pt-2">
+                  <button mat-raised-button color="accent" class="fw-bold me-2" >ADMINISTRAR</button>
                   <button mat-raised-button color="primary" class="fw-bold" >EDITAR</button>
                 </div>
               </mat-card-actions>
@@ -71,6 +21,3 @@
       </div>
     </div>
 
-
-  </mat-card-content>
-</mat-card>

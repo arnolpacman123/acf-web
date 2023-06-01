@@ -16,6 +16,7 @@ import { AcfDataService } from './services/acf.data.service';
 import { CardComponent } from './components/card/card.component';
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { NewElementCardComponent } from './components/new-element-card/new-element-card.component';
+import { NewChampionComponent } from './components/new-champion/new-champion.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { NewElementCardComponent } from './components/new-element-card/new-eleme
     DashboardComponent,
     CardComponent,
     NoimagePipe,
-    NewElementCardComponent
+    NewElementCardComponent,
+    NewChampionComponent
   ],
   imports: [
     CommonModule,
