@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-element-card',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./new-element-card.component.scss']
 })
 export class NewElementCardComponent {
+
+  rutas = "championship";
+
+  constructor(private router: Router) {
+
+  }
+
+  onButtonClick() {
+    this.router.navigate(['new']);
+  }
+
 
 }

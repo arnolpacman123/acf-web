@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PrivateComponent } from "@private/components/private/private.component";
-import { ChampionshipsComponent } from "@private/components/championships/championships.component";
+import { ChampionshipsComponent } from "@app/modules/private/pages/championships/championships.component";
 import { DashboardComponent } from "@private/components/dashboard/dashboard.component";
-import { NewChampionComponent } from './components/new-champion/new-champion.component';
+import { ChampionshipComponent } from '@private/pages/championship/championship.component';
 
 const routes: Routes = [
   {
@@ -15,11 +15,12 @@ const routes: Routes = [
         component: DashboardComponent,
       },
       {
+        path: 'championship/:option',
+        component: ChampionshipComponent,
+      },
+      {
         path: 'championships',
         component: ChampionshipsComponent,
-      },
-      {  path: 'createchampion',
-        component: NewChampionComponent,
       },
       {
         path: '**',

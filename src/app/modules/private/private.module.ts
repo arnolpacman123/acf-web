@@ -9,14 +9,15 @@ import { SidebarComponent } from './components/private/sidebar/sidebar.component
 import { NavItemComponent } from "@private/components/private/sidebar/nav-item/nav-item.component";
 import { BrandingComponent } from './components/private/sidebar/branding/branding.component';
 import { HeaderComponent } from './components/private/header/header.component';
-import { ChampionshipsComponent } from './components/championships/championships.component';
+import { ChampionshipsComponent } from './pages/championships/championships.component';
 import { FormsModule } from "@angular/forms";
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AcfDataService } from './services/acf.data.service';
 import { CardComponent } from './components/card/card.component';
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { NewElementCardComponent } from './components/new-element-card/new-element-card.component';
-import { NewChampionComponent } from './components/new-champion/new-champion.component';
+import { NewChampionshipComponent } from './components/new-championship/new-championship.component';
+import { ChampionshipComponent } from './pages/championship/championship.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { NewChampionComponent } from './components/new-champion/new-champion.com
     CardComponent,
     NoimagePipe,
     NewElementCardComponent,
-    NewChampionComponent
+    NewChampionshipComponent,
+    ChampionshipComponent
   ],
   imports: [
     CommonModule,

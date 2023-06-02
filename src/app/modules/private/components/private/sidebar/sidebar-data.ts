@@ -15,6 +15,11 @@ export const navItems: NavItem[] = [
     route: '/championships',
   },
   {
+    displayName: 'Clubs',
+    iconName: 'trophy',
+    route: '/clubs',
+  },
+  {
     navCap: 'Ui Components',
   },
   {

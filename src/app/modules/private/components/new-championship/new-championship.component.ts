@@ -16,15 +16,15 @@ export const MY_FORMATS = {
 };
 
 @Component({
-  selector: 'app-new-champion',
-  templateUrl: './new-champion.component.html',
-  styleUrls: ['./new-champion.component.scss'],
+  selector: 'app-new-championship',
+  templateUrl: './new-championship.component.html',
+  styleUrls: ['./new-championship.component.scss'],
   providers: [
     { provide: DateAdapter, useClass: MomentDateAdapter, deps: [ MAT_DATE_LOCALE ] },
     { provide: MAT_DATE_FORMATS, useValue: MY_FORMATS },
   ]
 })
-export class NewChampionComponent {
+export class NewChampionshipComponent {
   @ViewChild('picker', { static: false }) picker!: MatDatepicker<Date>;
 
   openDatePicker(): void {
